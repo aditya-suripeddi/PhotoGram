@@ -1,0 +1,33 @@
+{  // compiler bundler and linting settings
+  "compilerOptions": {
+
+    // https://github.com/uploadcare/blocks-examples/blob/main/examples/react-uploader/tsconfig.json
+    "types": ["@uploadcare/blocks/types/jsx"],
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "baseUrl": ".",
+    "paths": { 
+      "@/*": ["./src/*"] 
+    },
+    "skipLibCheck": true,
+
+    
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
