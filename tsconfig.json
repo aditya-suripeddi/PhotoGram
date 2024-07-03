@@ -1,0 +1,24 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    },
+    
+  ],
+  "compilerOptions": {
+    // shadcn-ui: adding path resolution setting here for 
+    //            $ npx shadcn-ui@latest add button
+    //            to add button component in src/components/ui      
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "types": ["@uploadcare/blocks/types/jsx"]
+  }
+}

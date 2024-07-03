@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "noEmit": true,
+    // shadcn-ui: adding the path resolution setting here
+    //            makes VSCode recognize 
+    //            src/componnets/ui/button.tsx: import { cn } from "@/lib/utils"  
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+
+    "types": ["@uploadcare/blocks/types/jsx"]
+  },
+  "include": ["vite.config.ts"]
+}
